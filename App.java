@@ -22,7 +22,7 @@ public class App {
         char[] charArray = charString.toCharArray(); 
         
         //reading the file in
-       BufferedImage image = javax.imageio.ImageIO.read(new File("C:\\Users\\Tymon\\Desktop\\code\\AsciiArtGenerator\\dupat.jpg"));
+       BufferedImage image = javax.imageio.ImageIO.read(new File("\\inputfile.jpg"));
 
        //setting scale of the ASCII picture
        double scale = 0.05;
@@ -45,7 +45,7 @@ public class App {
        canvas.fillRect(0,0, newWidth * oneCharWidth, newHeight * oneCharHeight);
 
 
-       try (FileWriter textFile = new FileWriter("C:\\Users\\Tymon\\Desktop\\code\\AsciiArtGenerator\\nowy.txt")) {
+       try (FileWriter textFile = new FileWriter("\\outputfile.txt")) {
         for(int i = 0; i < newHeight; i++){
                 for(int j = 0; j < newWidth; j++){
 
@@ -69,7 +69,7 @@ public class App {
         }
      }
      canvas.dispose(); 
-     File newImage = new File ("zapisany.png");
+     File newImage = new File ("outputfile.png");
      ImageIO.write(imageToSave, "png", newImage); 
     }
 }
